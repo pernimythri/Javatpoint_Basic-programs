@@ -1,0 +1,50 @@
+import java.util.*;
+class Main{
+    String palindrome(int n)
+    {
+        int temp=n;
+        int rev=0;
+        while(n>0)
+        {
+            int rem=n%10;
+            rev=rev*10+rem;
+            n/=10;
+        }
+        if(temp==rev)
+        return "palindrome";
+        else
+        return "Not palindrome";
+    }
+    
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        Main obj=new Main();
+        int n=sc.nextInt();
+        System.out.println(obj.palindrome(n));
+    }
+}
+
+------------------------------------------------------------------------------------------------------
+
+import java.util.*;
+class Main{
+    String palindrome(String str)
+    {
+        String temp=str;
+        for(int i=0;i<str.length()/2;i++)
+        {
+            if(str.charAt(i)!=str.charAt(str.length()-i-1))
+              return "Not palindrome";
+        }
+        return "palindrome";
+    }
+    
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        Main obj=new Main();
+        String str=sc.nextLine();
+        System.out.println(obj.palindrome(str));
+    }
+}
