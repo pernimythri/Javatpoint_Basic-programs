@@ -1,0 +1,62 @@
+import java.util.*;
+class Main{
+   String armstrong(int n)
+   {
+    int temp=n;
+    int sum=0;
+    while(n>0)
+    {
+        int rem=n%10;
+        sum+=rem*rem*rem;
+        n/=10;
+    }
+    if(sum==temp)
+    return "Armstrong";
+    else
+    return "Not Armstrong";
+   }
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        Main obj=new Main();
+        int n=sc.nextInt();
+        System.out.println(obj.armstrong(n));
+    }
+}
+--------------------------------------------------------------------------------------
+
+import java.util.*;
+import java.lang.*;
+class Main{
+   boolean armstrong(int n)
+   {
+    int temp=n;
+    int sum=0,count=0;
+    while(temp>0)
+    {
+        temp/=10;
+        count++;
+    }
+    temp=n;
+    while(temp>0)
+    {
+        int rem=temp%10;
+        sum+=Math.pow(rem,count);
+        temp/=10;
+    }
+    if(sum==n)
+    return true;
+    else
+    return false;
+   }
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        Main obj=new Main();
+        int n=sc.nextInt();
+        for(int i=1;i<n;i++)
+        {
+        if(obj.armstrong(i))
+        System.out.print(i+" ");
+    }
+}}
