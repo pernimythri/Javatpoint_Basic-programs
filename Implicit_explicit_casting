@@ -1,0 +1,24 @@
+//Ascii value
+
+import java.util.*;
+class Main{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+       char str='a';
+       int k=str;
+       System.out.println(k);
+    }
+}
+
+-------------------------------------------------------------------
+import java.util.*;
+class Main{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+       char str='a';
+       int k=(int)str;
+       System.out.println(k);
+    }
+}
